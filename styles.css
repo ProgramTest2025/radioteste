@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    background-image: url(FundoImagens/FundoVermelhado.gif);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 100px rgb(208, 255, 0);
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho máximo da container */
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff; /* Cor inicial */
+    animation: color-change 2s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: rgb(255, 0, 0); /* Vermelho */
+    }
+    25% {
+        color: rgb(255, 165, 0); /* Laranja */
+    }
+    50% {
+        color: rgb(0, 128, 0); /* Verde */
+    }
+    75% {
+        color: rgb(0, 0, 255); /* Azul */
+    }
+    100% {
+        color: rgb(128, 0, 128); /* Roxo */
+    }
+}
+.radio-list {
+    margin-bottom: 20px;
+}
+
+.radio-btn {
+    background-color: rgb(255, 4, 16);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 10px;
+    font-size: 20px; /* Diminui o tamanho da fonte em telas menores */
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.radio-btn:hover {
+    background-color: #f58608;
+}
+
+.player {
+    color: rgb(208, 255, 0);
+    margin-top: 20px;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+#status {
+    color: rgb(0, 255, 55);
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+url {
+    color: chocolate;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduz o espaçamento em telas pequenas */
+    }
+
+    .container {
+        padding: 15px;
+        max-width: 100%; /* A container ocupa toda a largura disponível */
+    }
+
+    h1 {
+        font-size: 24px; /* Diminui o tamanho da fonte para h1 */
+        margin-bottom: 20px; /* Ajusta a margem inferior */
+    }
+
+    .radio-btn {
+        font-size: 18px; /* Diminui o tamanho da fonte para os botões */
+        padding: 8px 8px; /* Diminui o padding para caber melhor em telas pequenas */
+    }
+
+    audio {
+        max-width: 100%; /* Aumenta a largura máxima do player de áudio */
+    }
+}
+
+@media (max-width: 480px) {
+    .radio-btn {
+        font-size: 16px; /* Ajusta ainda mais o tamanho da fonte em telas muito pequenas */
+        padding: 6px 6px; /* Ajusta o padding dos botões */
+    }
+
+    h1 {
+        font-size: 20px; /* Diminui ainda mais o tamanho da fonte do título */
+    }
+
+    .container {
+        padding: 10px; /* Reduz o padding da container em telas muito pequenas */
+    }
+}
